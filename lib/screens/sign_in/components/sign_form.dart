@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
+import 'package:shop_app/screens/login_success/login_success_screen.dart';
 
 import '../../../components/custom_icon_surffix.dart';
 import '../../../components/default_button.dart';
@@ -46,7 +48,10 @@ class _SignFormState extends State<SignForm> {
               ),
               const Text("Remember me"),
               Spacer(),
-              const Text("Forgot Password", style: TextStyle(decoration: TextDecoration.underline),),
+              GestureDetector(
+                onTap: ()=>Navigator.popAndPushNamed(context, ForgotPasswordScreen.routeName),
+                child: const Text("Forgot Password", style: TextStyle(decoration: TextDecoration.underline),)
+              ),
             ],
           ),
           SizedBox(height: getProportionateScreenHeight(20),),
@@ -55,6 +60,8 @@ class _SignFormState extends State<SignForm> {
             press: (){
               if(_formkey.currentState!.validate()){
                 _formkey.currentState!.save();
+                // if all are valid then go to success 
+                Navigator.pushNamed(context, LoginSuccesScreen.routeName);
               }
 
             }
@@ -86,10 +93,12 @@ class _SignFormState extends State<SignForm> {
               setState(() {
                 errors.add(kPassNullError);
               });
+              return "";
             }else if(value.length<8 && !errors.contains(kShortPassError)){
               setState(() {
                 errors.add(kShortPassError);
               });
+              return "";
             }
             return null;
           },
@@ -123,10 +132,12 @@ class _SignFormState extends State<SignForm> {
               setState(() {
                 errors.add(kEmailNullError);
               });
+              return "";
             }else if(!emailValidatorRegExp.hasMatch(value) && !errors.contains(kInvalidEmailError)){
               setState(() {
                 errors.add(kInvalidEmailError);
               });
+              return "";
             }
             return null;
           },

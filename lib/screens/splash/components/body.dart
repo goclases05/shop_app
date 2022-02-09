@@ -20,16 +20,16 @@ class _BodyState extends State<Body> {
 
   List<Map<String,String>> SplashData=[
     {
-      "text":"Welcome to Tokio, Let's shop!",
-      "image": "assets/images/splash_1.png"
+      "text":"¡Bienvenido a Gozeri Market, compremos!",
+      "image": "assets/img/splash_1.svg"
     },
     {
-      "text":"We help people conect with store \naround United State of America",
-      "image": "assets/images/splash_2.png"
+      "text":"Ayudamos a las personas a conectarse con la tienda \nalrededor de Guatemala",
+      "image": "assets/img/splash_2.svg"
     },
     {
-      "text":"We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/splash_3.png"
+      "text":"Te mostramos la manera fácil de comprar. \nQuédate en casa con nosotros",
+      "image": "assets/img/splash_3.svg"
     },
   ];
   @override

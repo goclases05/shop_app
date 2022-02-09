@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/constants.dart';
+import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/sign_in/components/sign_form.dart';
 import 'package:shop_app/size_config.dart';
 
 import '../../../components/custom_icon_surffix.dart';
 import '../../../components/form_error_file.dart';
+import '../../../components/no_account_text.dart';
 import '../../../components/socal_card.dart';
 
 class Body extends StatelessWidget {
@@ -47,13 +49,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text("Don't have an account?",style: TextStyle(fontSize: getProportionateScreenWidth(16)),),
-                    Text("Sing Up",style: TextStyle(fontSize: getProportionateScreenWidth(16),color: kPrimaryColor),)
-                  ],
-                )
+                const NoAccountText()
               ]
             ),
           ),
@@ -62,6 +58,8 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
