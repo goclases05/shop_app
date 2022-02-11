@@ -1,8 +1,10 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/login_success/login_success_screen.dart';
 import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/sign_up/sign_up_screen.dart';
 import 'package:shop_app/screens/splash/splash_screen.dart';
 import 'package:shop_app/size_config.dart';
 
@@ -27,4 +29,6 @@ final Map<String, WidgetBuilder> routes = {
   SignInScreen.routeName:(context)=>SignInScreen(),
   ForgotPasswordScreen.routeName:(context)=>ForgotPasswordScreen(),
   LoginSuccesScreen.routeName:(context)=>const LoginSuccesScreen(),
+  SignUpScreen.routeName:(context)=>const SignUpScreen(),
+  CompleteProfileScreen.routeName:(context)=>const CompleteProfileScreen(),
 };

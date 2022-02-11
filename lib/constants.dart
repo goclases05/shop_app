@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/size_config.dart';
 
 
 const kPrimaryColor = Color.fromARGB(255, 7, 180, 180);
@@ -12,7 +13,7 @@ const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
 
 const kAnimationDuration = Duration(milliseconds: 200);
-/*
+
 final headingStyle = TextStyle(
   fontSize: getProportionateScreenWidth(28),
   fontWeight: FontWeight.bold,
@@ -20,7 +21,7 @@ final headingStyle = TextStyle(
   height: 1.5,
 );
 
-const defaultDuration = Duration(milliseconds: 250);*/
+const defaultDuration = Duration(milliseconds: 250);
 
 //Form Error español
 final RegExp emailValidatorRegExp =
